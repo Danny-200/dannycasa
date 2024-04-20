@@ -1,0 +1,83 @@
+/* home.page.scss */
+
+/* Estilos para el contenedor principal */
+.house-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 20px;
+  background: linear-gradient(190deg, #1500f6, #02891f); /* Cambiar el fondo a un degradado */
+  padding: 20px;
+  border-radius: 30px; /* Bordes más redondeados */
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3); /* Aumentar la intensidad de la sombra */
+}
+
+/* Estilos para el techo */
+.roof {
+  width: 0;
+  height: 0;
+  border-left: 120px solid transparent;
+  border-right: 120px solid transparent;
+  border-bottom: 100px solid #ff8706;
+}
+
+/* Estilos para el cuerpo de la casa */
+.house-body {
+  border: 3px solid #4a6bc9; /* Aumentar el grosor del borde */
+  border-radius: 30px; /* Bordes más redondeados */
+  padding: 20px;
+  background-color: #e38a8a6a; /* Cambiar el color de fondo */
+}
+
+/* Estilos para los botones de las luminarias */
+.house-container ion-icon {
+  font-size: 3.5rem; /* Aumentar el tamaño del ícono */
+  transition: transform 0.3s ease; /* Añadir transición de transformación */
+}
+
+.house-container p {
+  margin-top: 15px; /* Espacio entre el ícono y el texto */
+  font-size: 1.4rem; /* Aumentar tamaño del texto */
+  color: #333; /* Cambiar color del texto */
+}
+
+.encendida,
+.apagada {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 140px; /* Aumentar la altura para mayor prominencia */
+  border-radius: 30px; /* Bordes más redondeados */
+  margin: 15px;
+  padding: 15px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Suavizar la sombra */
+  transition: all 0.3s ease; /* Agregar transición suave */
+}
+
+.encendida:hover,
+.apagada:hover {
+  transform: scale(1.1); /* Aumentar tamaño al pasar el mouse */
+}
+
+.encendida {
+  border: 3px solid #00ff7f; /* Cambiar el color del borde cuando está encendida */
+  color: #00ff7f; /* Color de texto cuando está encendida */
+}
+
+.apagada {
+  border: 3px solid #770000; /* Cambiar el color del borde cuando está apagada */
+  color: #770000; /* Color de texto cuando está apagada */
+}
+
+/* Animación de fondo */
+@keyframes gradientAnimation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.house-container {
+  animation: gradientAnimation 10s ease infinite; /* Animación de fondo */
+}
